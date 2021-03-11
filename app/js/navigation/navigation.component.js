@@ -6,11 +6,7 @@ angular.module('app').component('navigation', {
     controller: ['$timeout', '$http', '$location', function ($timeout, $http, $location) {
         var ctrl = this;
 
-		debugger;
 		ctrl.navigate = function (navRoute) {
-            console.log(navRoute);
-			debugger;
-			console.log($location.url());
 			$location.url(navRoute);
         };
 	}]
