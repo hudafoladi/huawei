@@ -33,6 +33,8 @@
         
         //Custom Modules
         'dashboard',
+        'chartsdisplay',
 		'datatable'
+
     ]);
 })();

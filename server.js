@@ -67,6 +67,10 @@ app.get('/datatable', function(req, res) {
   res.sendFile(__dirname + '/' + root + '/index.html');
 });
 
+app.get('/chartsdisplay', function(req, res) {
+  res.sendFile(__dirname + '/' + root + '/index.html');
+});
+
 app.post('/testSaveFormData', function(req, res) {
   if(req.body.fistName == '' || req.body.lastName == '' || req.body.occupation == '' || req.body.gender == '' || req.body.isActive == '')
   {
@@ -78,6 +82,7 @@ app.post('/testSaveFormData', function(req, res) {
     res.send('Mock Data Saved Successfully');
   }
 });
+
 
 // app.get('/person/:user', function(req, res) {
 //   res.sendFile(__dirname + '/' + root + '/index.html');
