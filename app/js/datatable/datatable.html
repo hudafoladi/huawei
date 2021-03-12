@@ -41,7 +41,7 @@
 	<div class="card-header py-3">
 		<h6 class="m-0 font-weight-bold text-primary">Form Post Example</h6>
 	</div>
-
+	
 	<form class="form" ng-submit="$ctrl.saveForm($ctrl.formData)">
 		<div>
 			<label>First Name:</label><br>
@@ -56,7 +56,7 @@
 			<select id="occupation" 
 				ng-options="option.id as option.name for option in $ctrl.occupationList"
 				ng-model="$ctrl.formData.occupation">
-				<option value="">please choose one</option>
+				<option value="" >please choose one</option>
 			</select>
 		</div>
 		<div>

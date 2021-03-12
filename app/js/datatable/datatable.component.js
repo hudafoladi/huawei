@@ -71,7 +71,7 @@ angular.module('datatable').component('datatable', {
 		ctrl.saveForm = function(val){
 			
 
-			console.log(val)
+			console.log(val);
 			dataTableService.postFormData(val).then(function(response){
 				console.log('success', response);
 				showSuccess(response.data);
