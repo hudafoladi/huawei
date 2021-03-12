@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"name": "Salesman",
+		"description": "Salesman for Services"
+	},
+	{
+		"id": 2,
+		"name": "Engineer",
+		"description": "Mechanical, Electrical,etc"
+	},
+	{
+		"id": 3,
+		"name": "Developer",
+		"description": "Web Developer"
+	},
+	{
+		"id": 4,
+		"name": "Arhcitect",
+		"description": "Designing Buildings"
+	}
+]
