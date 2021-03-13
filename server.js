@@ -66,6 +66,9 @@ app.get('/', function(req, res) {
 app.get('/datatable', function(req, res) {
   res.sendFile(__dirname + '/' + root + '/index.html');
 });
+app.get('/chartsdisplay', function(req, res) {
+  res.sendFile(__dirname + '/' + root + '/index.html');
+});
 // app.get('/person/:user', function(req, res) {
 //   res.sendFile(__dirname + '/' + root + '/index.html');
 // });

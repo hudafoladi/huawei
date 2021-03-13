@@ -48,6 +48,19 @@
 					}
 				},
 				{
+					url: '/chartsdisplay',
+					name: 'chartsdisplay',
+					subRoutes: [],
+					config: {
+						template: '<chartsdisplay></chartsdisplay>',
+						component: 'chartsdisplay',
+						settings: {
+							nav: 1,
+							content: '<i class="fa fa-users"></i> chartsdisplay'
+						}
+					}
+				},
+				{
 					url: '/blank',
 					name: 'HomePage',
 					subRoutes: [],
