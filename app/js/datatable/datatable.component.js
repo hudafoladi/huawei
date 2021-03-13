@@ -3,15 +3,30 @@ angular.module('datatable').component('datatable', {
     bindings: {
         //same as directive attribute scope
     },
-    controller: ['$timeout', '$http', function ($timeout, $http) {
+    controller: ['$timeout', '$http', 'dataTableService', function ($timeout, $http, dataTableService) {
         var ctrl = this;
+
+		ctrl.datatable = [];
+
 		function tables()
 		{
 			$('#dataTable').DataTable();
 		}
 
-		$timeout(function(){
-			tables();
-        }, 0);
+		ctrl.tableHeader = 'DataTables Example';
+
+		dataTableService.getDatatable().then(function(response){
+			debugger;
+			console.log('success', response);
+			ctrl.datatable = response.data;
+
+			$timeout(function(){
+				tables();
+			}, 0);
+		},
+		function(error){
+			console.log('error', error);
+		});
+
 	}]
 });
