@@ -13,6 +13,7 @@
         //'common.bootstrap', // bootstrap dialog wrapper functions
 
         // 3rd Party Modules
+        'directive.g+signin',
         //'ui.bootstrap',    // ui-bootstrap (ex: carousel, pagination, dialog)
         //'infinite-scroll',
         //'ngJqxsettings',
@@ -32,6 +33,8 @@
         //'app.filters',
         
         //Custom Modules
+        'layout',
+        'login',
         'dashboard',
         'chartsdisplay',
 		'datatable'

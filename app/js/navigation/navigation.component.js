@@ -3,7 +3,7 @@ angular.module('app').component('navigation', {
     bindings: {
         //same as directive attribute scope
     },
-    controller: ['$timeout', '$http', '$location', function ($timeout, $http, $location) {
+    controller: ['$timeout', '$http', '$location', '$route', function ($timeout, $http, $location, $route) {
         var ctrl = this;
 
 		ctrl.navigate = function (navRoute) {
