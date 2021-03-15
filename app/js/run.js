@@ -33,11 +33,12 @@
         //'app.filters',
         
         //Custom Modules
+        'googleapi',
         'layout',
         'login',
         'dashboard',
         'chartsdisplay',
 		'datatable'
 
-    ]);
+    ])
 })();

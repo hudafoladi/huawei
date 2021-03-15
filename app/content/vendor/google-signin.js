@@ -16,7 +16,7 @@
  */
 
 angular.module('directive.g+signin', []).
-  directive('googlePlusSignin', ['$window', '$rootScope', function ($window, $rootScope) {
+  directive('googlePlusSignin', ['$window', '$rootScope', 'googleApiService', function ($window, $rootScope, googleApiService) {
       var ending = /\.apps\.googleusercontent\.com$/;
 
       return {
@@ -81,16 +81,32 @@ angular.module('directive.g+signin', []).
             //   po.async = true;
             //   po.src = 'https://apis.google.com/js/client:platform.js';
             //   var s = document.getElementsByTagName('script')[0];
-            debugger;
-              var googleApi = document.getElementById('googleApi');
+            // debugger;
+            //   var googleApi = document.getElementById('googleApi');
               
             //  s.parentNode.insertBefore(po, s);
 
 
               linker(function (el, tScope) {
-                  if (el.length) {
-                      element.append(el);
-                  }
+                if (el.length) 
+                {
+                    element.append(el);
+                }
+
+                
+                //debugger;
+                googleApiService.googleAuthPromise.then(function(googleAuthObj){
+                    
+                    if (isAutoRendering) 
+                    {
+                        gapi.signin2.render(element[0], defaults);
+                    } 
+                    else 
+                    {
+                        googleAuthObj.attachClickHandler(defaults.customtargetid, {}, defaults.onsuccess, defaults.onfailure);
+                    }
+
+                });
 
                 //   debugger;
                 // var googleAuthObj = gapi.auth2.getAuthInstance();
@@ -106,21 +122,21 @@ angular.module('directive.g+signin', []).
                 // {
                 // }
                 //Initialize Auth2 with our clientId
-                gapi.load('auth2', function () {
-                    var googleAuthObj =
-                    gapi.auth2.init({
-                        client_id: defaults.clientid,
-                        cookie_policy: defaults.cookiepolicy
-                    });
+                // gapi.load('auth2', function () {
+                //     var googleAuthObj =
+                //     gapi.auth2.init({
+                //         client_id: defaults.clientid,
+                //         cookie_policy: defaults.cookiepolicy
+                //     });
 
-                    if (isAutoRendering) {
-                        gapi.signin2.render(element[0], defaults);
-                    } else {
-                        googleAuthObj.attachClickHandler(defaults.customtargetid, {}, defaults.onsuccess, defaults.onfailure);
-                    }
-                });
-                googleApi.onload = function () {
-                  };
+                //     if (isAutoRendering) {
+                //         gapi.signin2.render(element[0], defaults);
+                //     } else {
+                //         googleAuthObj.attachClickHandler(defaults.customtargetid, {}, defaults.onsuccess, defaults.onfailure);
+                //     }
+                // });
+                // googleApi.onload = function () {
+                //   };
               });
 
           }
