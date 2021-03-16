@@ -1,8 +1,22 @@
 module.exports = function () {
+
+    var root = './';
+    var clientApp = './app/';
+    var clientAppJs = clientApp + 'js';
+    var content = clientApp + 'content/';
+    var vendor = content + 'vendor/';
+
 	var config = {
 
+        alljs: [
+            //'./src/client/app/customers/*.js'
+            './app/js/**/*.js',
+            '!node_modules/**'
+            //'./*.js'
+        ],
 
-		
+        vendorDrop: vendor + 'vendorBuild', 
+		index: clientApp + 'index.html',
 		/**
          * Node Settings
         */

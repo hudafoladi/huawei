@@ -2,10 +2,10 @@
     'use strict';
 
     // Collect the routes
-    angular.module('app').constant('routes', getRoutes());
+    angular.module('app').constant('routines', getRoutes());
 
 	// Configure the routes and route resolvers
-	angular.module('app').config(['$routeProvider', '$locationProvider', 'routes', routeConfigurator]);
+	angular.module('app').config(['$routeProvider', '$locationProvider', 'routines', routeConfigurator]);
 
 	function routeConfigurator($routeProvider, $locationProvider, routes) {
         $locationProvider.html5Mode(true);
@@ -30,7 +30,8 @@
 						title: 'Home',
 						settings: {
 							nav: 1,
-							content: '<i class="fa fa-users"></i> People'
+							content: '<i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span></a>',
+							divider: true
 						}
 					}
 				},
@@ -41,9 +42,26 @@
 					config: {
 						template: '<datatable></datatable>',
 						component: 'datatable',
+						title: 'DataTable',
 						settings: {
 							nav: 1,
-							content: '<i class="fa fa-users"></i> datatable'
+							content: '<i class="fas fa-fw fa-table"></i><span>Tables</span>'
+						}
+					}
+				},
+				{
+					url: '/test',
+					name: 'testPage',
+					subRoutes: [],
+					config: {
+						template: '<testpage></testpage>',
+						component: 'testpage',
+						title: 'TestPage',
+						settings: {
+							nav: 1,
+							content: '<i class="fas fa-fw fa-chart-area"></i> <span>test</span></a>',
+							divider: true,
+							header: 'Testing Components'
 						}
 					}
 				},
@@ -54,25 +72,13 @@
 					config: {
 						template: '<chartsdisplay></chartsdisplay>',
 						component: 'chartsdisplay',
+						title: 'Charts',
 						settings: {
 							nav: 1,
-							content: '<i class="fa fa-users"></i> chartsdisplay'
+							content: '<i class="fas fa-fw fa-chart-area"></i> <span>Charts</span></a>'
 						}
 					}
-				},
-				{
-					url: '/blank',
-					name: 'HomePage',
-					subRoutes: [],
-					config: {
-						templateUrl: '/js/blank/blank.html',
-						title: 'Home',
-						settings: {
-							nav: 1,
-							content: '<i class="fa fa-users"></i> People'
-						}
-					}
-				},
+				}
 			]
 		}
 })();

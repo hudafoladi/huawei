@@ -4,23 +4,49 @@
   "description": "Island",
   "main": "index.js",
   "scripts": {
-    "serve-local": "gulp serve-dev"
+    "serve-local": "gulp serve-dev",
+    "build-vendor-files": "gulp build-vendor"
   },
   "author": "Murtaza",
   "license": "ISC",
   "devDependencies": {
     "body-parser": "^1.19.0",
+    "browserify": "^16.5.1",
     "connect-livereload": "^0.6.1",
     "express": "^4.17.1",
     "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-inject": "^4.1.0",
     "gulp-live-server": "0.0.31",
-    "serve-static": "^1.14.1"
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.7",
+    "popper.js": "^1.16.1",
+    "serve-static": "^1.14.1",
+    "uglify-es": "^3.3.9",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "gulp-useref": "^3.1.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-if": "^2.0.1",
+    "del": "^2.2.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@popperjs/core": "^2.9.1",
     "angular": "^1.8.2",
     "angular-animate": "^1.8.2",
     "angular-route": "^1.8.2",
     "angular-sanitize": "^1.8.2",
+    "bootstrap": "^4.5.3",
+    "chart.js": "^2.9.4",
+    "datatables.net-bs4": "^1.10.24",
+    "jquery": "^3.5.1",
+    "jquery.easing": "^1.4.1",
     "ui-bootstrap4": "^3.0.7"
   }
 }

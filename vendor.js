@@ -1,0 +1,11 @@
+window.$ = window.jQuery = require('jquery');
+window.easing = require('jquery.easing');
+window.bootstrap = require('bootstrap');
+window.DataTable = require('datatables.net-bs4')(window, $);;
+window.chartjs = require('chart.js');
+window.angular = require('angular');
+window.angularAnimate = require('angular-animate');
+window.angularRoute = require('angular-route');
+window.angularSanitize = require('angular-sanitize');
+window.uibootstrap4 = require('ui-bootstrap4');
+window.templatejs = require('./app/content/js/sb-admin-2.js');

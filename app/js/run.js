@@ -14,7 +14,7 @@
 
         // 3rd Party Modules
         'directive.g+signin',
-        //'ui.bootstrap',    // ui-bootstrap (ex: carousel, pagination, dialog)
+        'ui.bootstrap',    // ui-bootstrap (ex: carousel, pagination, dialog)
         //'infinite-scroll',
         //'ngJqxsettings',
         // 'breeze.angular',
@@ -38,7 +38,8 @@
         'login',
         'dashboard',
         'chartsdisplay',
-		'datatable'
+		'datatable',
+        'testpage'
 
     ])
 })();
