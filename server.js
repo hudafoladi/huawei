@@ -71,6 +71,10 @@ app.get('/chartsdisplay', function(req, res) {
   res.sendFile(__dirname + '/' + root + '/index.html');
 });
 
+app.get('/test', function(req, res) {
+  res.sendFile(__dirname + '/' + root + '/index.html');
+});
+
 app.post('/testSaveFormData', function(req, res) {
   if(req.body.fistName == '' || req.body.lastName == '' || req.body.occupation == '' || req.body.gender == '' || req.body.isActive == '')
   {

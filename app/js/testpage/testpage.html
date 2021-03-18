@@ -3,7 +3,7 @@
  <p class="mb-4">Testing UI bootstrap Components</p>
 
  <!-- Content Row -->
- <div class="row">
+ <!-- <div class="row">
 	<uib-accordion close-others="oneAtATime">
 		<div uib-accordion-group class="mt-1" heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
 		  This content is straight in the template.
@@ -36,4 +36,22 @@
 		  This is just some content to illustrate fancy headings.
 		</div>
 	  </uib-accordion>
+ </div> -->
+
+
+
+ <div>
+
+
+	<p class="input-group">
+		<input type="text" class="form-control" uib-datepicker-popup="dd-MM-yyyy" ng-model="$ctrl.datepickerPopup.dateValue" is-open="$ctrl.datepickerPopup.opened" datepicker-options="$ctrl.datepickerPopup.dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+		<span class="input-group-btn">
+		  <button type="button" class="btn btn-secondary" ng-click="$ctrl.datepickerPopup.open()">
+			<i class="fas fa-calendar-alt">
+			  
+			</i>
+		  </button>
+		</span>
+	  </p>
+
  </div>
